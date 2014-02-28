@@ -36,7 +36,7 @@
         "doctrine/common": "~2.2",
         "knplabs/knp-menu-bundle": ">=1.1.0,<3.0.0",
         "knplabs/knp-menu": ">=1.1.0,<3.0.0",
-        "braincrafted/bootstrap-bundle": "dev-master",
+        "braincrafted/bootstrap-bundle": "dev-develop",
         "sp/bower-bundle": "dev-master"
     },
     "require-dev": {
