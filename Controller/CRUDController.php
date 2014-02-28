@@ -305,7 +305,7 @@ class CRUDController extends Controller
         $form->setData($object);
 
         if ($this->getRestMethod() == 'POST') {
-            $form->bind($this->get('request'));
+            $form->submit($this->get('request'));
 
             $isFormValid = $form->isValid();
 
@@ -474,6 +474,8 @@ class CRUDController extends Controller
         $query->setFirstResult(null);
         $query->setMaxResults(null);
 
+        $this->admin->preBatchAction($action, $query, $idx, $allElements);
+
         if (count($idx) > 0) {
             $this->admin->getModelManager()->addIdentifiersToQuery($this->admin->getClass(), $query, $idx);
         } elseif (!$allElements) {
@@ -507,7 +509,7 @@ class CRUDController extends Controller
         $form->setData($object);
 
         if ($this->getRestMethod()== 'POST') {
-            $form->bind($this->get('request'));
+            $form->submit($this->get('request'));
 
             $isFormValid = $form->isValid();
 
@@ -811,7 +813,7 @@ class CRUDController extends Controller
 
         $request = $this->getRequest();
         if ($request->getMethod() === 'POST') {
-            $form->bind($request);
+            $form->submit($request);
 
             if ($form->isValid()) {
                 $adminObjectAclManipulator->updateAcl($adminObjectAclData);
