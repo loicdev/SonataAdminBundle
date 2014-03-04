@@ -1,5 +1,5 @@
 {
-    "name": "matheo/admin-bundle",
+    "name": "sonata-project/admin-bundle",
     "type": "symfony-bundle",
     "description": "Symfony SonataAdminBundle",
     "keywords": ["Admin Generator", "admin", "sonata", "bootstrap"],
